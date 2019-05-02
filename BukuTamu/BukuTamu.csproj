@@ -1,0 +1,469 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B9648C93-F05B-408C-AD2B-29A97F6DB24A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BukuTamu</RootNamespace>
+    <AssemblyName>BukuTamu</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>if_x-office-address-book_118894.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>BukuTamu.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge">
+      <HintPath>..\packages\AForge.2.2.5\lib\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Imaging">
+      <HintPath>..\..\BukuTamu - Copy\BukuTamu\bin\Debug\AForge.Imaging.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video">
+      <HintPath>..\packages\AForge.Video.2.2.5\lib\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow">
+      <HintPath>..\packages\AForge.Video.DirectShow.2.2.5\lib\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.FFMPEG">
+      <HintPath>C:\Users\fajarsubeki\Downloads\webcam\webcam\Referances\AForge.Video.FFMPEG.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.VFW">
+      <HintPath>C:\Users\fajarsubeki\Downloads\webcam\webcam\Referances\AForge.Video.VFW.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\Bahan Kodingan\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="MySql.Data, Version=8.0.11.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\MySQL\MySQL Connector Net 8.0.11\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Zen.Barcode.Core">
+      <HintPath>..\..\BukuTamu - Copy\BukuTamu\bin\Debug\Zen.Barcode.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing">
+      <HintPath>..\..\..\Bahan Kodingan\c#\zxing.net.0.16.4 (2)\lib\net40\zxing.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="adm_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adm_login.Designer.cs">
+      <DependentUpon>adm_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adm_utama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adm_utama.Designer.cs">
+      <DependentUpon>adm_utama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ad_alumni.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ad_alumni.Designer.cs">
+      <DependentUpon>ad_alumni.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ad_kunjungan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ad_kunjungan.Designer.cs">
+      <DependentUpon>ad_kunjungan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ad_ortu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ad_ortu.Designer.cs">
+      <DependentUpon>ad_ortu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ad_perusahaan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ad_perusahaan.Designer.cs">
+      <DependentUpon>ad_perusahaan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AD_Umum.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AD_Umum.Designer.cs">
+      <DependentUpon>AD_Umum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ad_undangan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ad_undangan.Designer.cs">
+      <DependentUpon>ad_undangan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fr_splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fr_splash.Designer.cs">
+      <DependentUpon>fr_splash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fr_utama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fr_utama.Designer.cs">
+      <DependentUpon>fr_utama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Generate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Generate.Designer.cs">
+      <DependentUpon>Generate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="koneksi.cs" />
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\cetak_lap_alumni.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\cetak_lap_alumni.Designer.cs">
+      <DependentUpon>cetak_lap_alumni.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\cetak_lap_kunjungan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\cetak_lap_kunjungan.Designer.cs">
+      <DependentUpon>cetak_lap_kunjungan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\cetak_lap_perusahaan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\cetak_lap_perusahaan.Designer.cs">
+      <DependentUpon>cetak_lap_perusahaan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\cetak_lap_tamu_ortu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\cetak_lap_tamu_ortu.Designer.cs">
+      <DependentUpon>cetak_lap_tamu_ortu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\cetak_lap_tamu_umum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\cetak_lap_tamu_umum.Designer.cs">
+      <DependentUpon>cetak_lap_tamu_umum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\cetak_lap_undangan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\cetak_lap_undangan.Designer.cs">
+      <DependentUpon>cetak_lap_undangan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\lap_tamu_alumni.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>lap_tamu_alumni.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\lap_tamu_kunjungan.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>lap_tamu_kunjungan.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\lap_tamu_ortu.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>lap_tamu_ortu.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\lap_tamu_perusahaan.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>lap_tamu_perusahaan.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\lap_tamu_umum.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>lap_tamu_umum.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\lap_tamu_undangan.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>lap_tamu_undangan.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\DashboardTM.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\DashboardTM.Designer.cs">
+      <DependentUpon>DashboardTM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\tAlumni.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\tAlumni.Designer.cs">
+      <DependentUpon>tAlumni.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\tKunjungan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\tKunjungan.Designer.cs">
+      <DependentUpon>tKunjungan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\tOrtu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\tOrtu.Designer.cs">
+      <DependentUpon>tOrtu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\tPerusahaan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\tPerusahaan.Designer.cs">
+      <DependentUpon>tPerusahaan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\tUmum.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\tUmum.Designer.cs">
+      <DependentUpon>tUmum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Undangan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Undangan.Designer.cs">
+      <DependentUpon>Undangan.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="adm_login.resx">
+      <DependentUpon>adm_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adm_utama.resx">
+      <DependentUpon>adm_utama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ad_alumni.resx">
+      <DependentUpon>ad_alumni.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ad_kunjungan.resx">
+      <DependentUpon>ad_kunjungan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ad_ortu.resx">
+      <DependentUpon>ad_ortu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ad_perusahaan.resx">
+      <DependentUpon>ad_perusahaan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AD_Umum.resx">
+      <DependentUpon>AD_Umum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ad_undangan.resx">
+      <DependentUpon>ad_undangan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fr_splash.resx">
+      <DependentUpon>fr_splash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fr_utama.resx">
+      <DependentUpon>fr_utama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Generate.resx">
+      <DependentUpon>Generate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Report\cetak_lap_alumni.resx">
+      <DependentUpon>cetak_lap_alumni.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\cetak_lap_kunjungan.resx">
+      <DependentUpon>cetak_lap_kunjungan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\cetak_lap_perusahaan.resx">
+      <DependentUpon>cetak_lap_perusahaan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\cetak_lap_tamu_ortu.resx">
+      <DependentUpon>cetak_lap_tamu_ortu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\cetak_lap_tamu_umum.resx">
+      <DependentUpon>cetak_lap_tamu_umum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\cetak_lap_undangan.resx">
+      <DependentUpon>cetak_lap_undangan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\lap_tamu_alumni.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>lap_tamu_alumni.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\lap_tamu_kunjungan.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>lap_tamu_kunjungan.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\lap_tamu_ortu.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>lap_tamu_ortu.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\lap_tamu_perusahaan.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>lap_tamu_perusahaan.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\lap_tamu_umum.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>lap_tamu_umum.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\lap_tamu_undangan.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>lap_tamu_undangan.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\DashboardTM.resx">
+      <DependentUpon>DashboardTM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\tAlumni.resx">
+      <DependentUpon>tAlumni.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\tKunjungan.resx">
+      <DependentUpon>tKunjungan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\tOrtu.resx">
+      <DependentUpon>tOrtu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\tPerusahaan.resx">
+      <DependentUpon>tPerusahaan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\tUmum.resx">
+      <DependentUpon>tUmum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Undangan.resx">
+      <DependentUpon>Undangan.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icons8_Contacts.ico" />
+    <Content Include="if_x-office-address-book_118894.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Ado.Net\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
